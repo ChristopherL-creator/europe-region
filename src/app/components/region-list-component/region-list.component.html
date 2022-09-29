@@ -1,0 +1,50 @@
+<h1>Europe's regions</h1> 
+
+<div> 
+    <div 
+    class="region-card"
+    *ngFor="let region of regionsArray"> 
+        <h3> 
+            {{region.name}}, ({{region.altSpelling}})
+        </h3> 
+        <span> 
+            <img src={{region.flags}} alt="">
+        </span> 
+        <div> 
+            Surface: {{region.area}} Square Meters;
+        </div>
+        <div> 
+            Population: {{region.population}};
+        </div> 
+        <div> 
+            Capital: {{region.capital}};
+        </div> 
+        <div> 
+            Languages: 
+            <span *ngFor="let language of region.languages | keyvalue"> 
+                {{language.value}},
+            </span> 
+        </div> 
+        <div> 
+            Timezone: {{region.timezones}};
+        </div> 
+        <!-- <div>  
+            <iframe 
+            width="425" 
+            height="350" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.942833542823793%2C44.40526618855918%2C8.946481347084047%2C44.40717085296262&amp;layer=mapnik&amp;marker=44.406218528513044%2C8.944657444953918" 
+            style="border: 1px solid black">
+            </iframe> <br/> 
+            <small> 
+                <a 
+                href={{region.maps}}> 
+                Visualizza mappa ingrandita 
+                </a> 
+            </small>
+        </div> -->
+    </div>
+</div>
