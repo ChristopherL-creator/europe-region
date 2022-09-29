@@ -12,7 +12,7 @@ export class RegionsService {
   constructor(private http: HttpClient) { } 
   
   getRegions(){ 
-    const regionsUrl = `${environment.BASE_REGION_URL}`; 
+    const regionsUrl = 'https://restcountries.com/v3.1/region/europe'; 
 
     return this.http.get<Region[]>(regionsUrl).pipe( 
       map(regions => this.parserRegions(regions))
