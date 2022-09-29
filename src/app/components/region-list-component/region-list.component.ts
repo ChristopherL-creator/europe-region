@@ -24,5 +24,21 @@ export class RegionListComponent implements OnInit {
       next: regions => this.regionsArray = regions, 
       error: err => console.log(err)
     });
+  } 
+
+  orderByName(){ 
+    this.regionsArray.sort(this.compareByName);
+  } 
+
+  compareByName(a: Region, b: Region){ 
+    return a.name.localeCompare(b.name);
+  }
+
+  orderByPopulation(){ 
+    this.regionsArray.sort(this.compareByPopulation);
+  } 
+
+  compareByPopulation(a: Region, b: Region){ 
+    return b.population - a.population;
   }
 }
