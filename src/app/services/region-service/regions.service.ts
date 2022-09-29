@@ -25,7 +25,7 @@ export class RegionsService {
     const regionsArray: Region[] = [];
     
     for (let i = 0; i < regions.length; i++) {
-      const region = regions[i];
+      const region = regions[i]; 
       console.log(region); 
 
       const regionID = i.toString();
